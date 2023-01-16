@@ -3,7 +3,7 @@ document.querySelector('#getButton').addEventListener('click', apiRequest)
 async function apiRequest(){
     const charName = document.querySelector('input').value
     try{
-        const response = await fetch( `./api/:${charName}`)
+        const response = await fetch( `${charName}`)
         const data = await response.json()
         console.log(data)
         
